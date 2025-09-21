@@ -9,6 +9,7 @@ import img07 from "../assets/img07.jpg";
 import img08 from "../assets/img08.jpg";
 import img09 from "../assets/img09.jpg";
 import { FaShare } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 
 
 const places = [
@@ -71,6 +72,7 @@ const places = [
 ];
 
 function PopularPlaces() {
+    const navigate = useNavigate();
   return (
     <>
     <div className='mt-[40px]  ' id="places">
@@ -100,10 +102,10 @@ function PopularPlaces() {
 
             {/* Hover Buttons */}
             <div className="absolute bottom-[-100%] left-0 w-full grid grid-cols-[60%_40%] justify-center items-center bg-[#1e90ff] text-[20px] font-[700] text-white transition-all duration-500 group-hover:bottom-0">
-              <button className="hover:bg-[#333] p-[10px] transition-all duration-300 cursor-pointer">
+              <button onClick={() => navigate("/hotels")}  className="hover:bg-[#333] p-[10px] transition-all duration-300 cursor-pointer">
                 Visit Us
               </button>
-              <button className="border-l-2 text-[30px] flex justify-center hover:bg-[#333] p-[10px] transition-all duration-300 cursor-pointer">
+              <button onClick={() => navigate("/hotels")}  className="border-l-2 text-[30px] flex justify-center hover:bg-[#333] p-[10px] transition-all duration-300 cursor-pointer">
                 <FaShare />
               </button>
             </div>
