@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+
+.container {
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.banner-bg{
+  background-image: url('./assets/banner.jpg');
+  background-size: cover;
+
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 90vh;
+}
